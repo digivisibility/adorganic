@@ -3,7 +3,7 @@
     <div class="row rless">
       {% if section.blocks.size > 0 %}      
           {% for block in section.blocks %}
-            <div class="col-sm-6 col-12 cless">
+            <div class="{% if section.blocks.size == 3 %}col-sm-4{% else %}col-sm-6{% endif %} col-12 cless">
               <div class="beffect">
                 {% if block.settings.link != blank %}<a href="{{ block.settings.link }}">{% endif%}
                 {% if block.settings.image != blank %}
@@ -41,7 +41,7 @@
 {
 "name": "Image Banner",
 "class": "spaced-section",
-"max_blocks": 2,  
+"max_blocks": 3,  
 "settings": [
     {
         "type": "color",

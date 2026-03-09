@@ -1,1 +1,27 @@
-{"type":"header","name":"header group","sections":{"header":{"type":"header","settings":{"topbg":"#ffffff","enable_country_selector":true,"enable_language_selector":true,"bg_color":"#06623b","cart_bg":"#a8c73a","offerhead":"Get Special Deal today! Get 3 products for 2. Limited offer.","btn":"read more","btnlink":"shopify:\/\/collections","logo":"shopify:\/\/shop_images\/Secondary-Logo.png","logo_width":250,"support_no":"610-403-403","megamenu_toggle":false,"enable_sticky_header":true}}},"order":["header"]}
+{
+    "type": "header",
+    "name": "header group",
+    "sections": {
+        "header": {
+            "type": "header",
+            "settings": {
+                "topbg": "#ffffff",
+                "enable_country_selector": false,
+                "enable_language_selector": false,
+                "bg_color": "#06623b",
+                "cart_bg": "#a8c73a",
+                "offerhead": "Free delivery on all products",
+                "btn": "",
+                "btnlink": "",
+                "logo": "shopify:\/\/shop_images\/Secondary-Logo.png",
+                "logo_width": 200,
+                "support_no": "610-403-403",
+                "megamenu_toggle": false,
+                "enable_sticky_header": true
+            }
+        }
+    },
+    "order": [
+        "header"
+    ]
+}

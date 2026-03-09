@@ -3,6 +3,9 @@
 <noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
 
 <div class="container wblogos">
+  {% if section.settings.m_title != blank %}
+        <h2 class="heading text-center"><span>{{ section.settings.m_title }}</span></h2>
+  {% endif %}
   <slider-component>
     <ul class="allslideprt slider rless" id="Slider-{{ section.id }}-{{ block.id }}">
         {% if section.blocks.size > 0 %}
@@ -30,6 +33,12 @@
   "class": "spaced-section",
   "max_blocks": 20,
   "settings": [
+    {
+      "type": "text",
+      "id": "m_title",
+      "label": "Heading",
+      "default": "We're Also On"
+    }
   ],
   "blocks": [
     {
