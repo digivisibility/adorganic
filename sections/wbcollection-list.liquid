@@ -1,92 +1,101 @@
-<link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
-
-<noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
-
-<div class="wbcolltop">
+<div class="wbcollection-list" data-section-id="{{ section.id }}">
   <div class="container">
-        {% if section.settings.m_title != blank %}
-            <h2 class="heading text-left"><span>{{ section.settings.m_title }}</span></h2>
-        {% endif %}
-        <slider-component>
-            <ul class="allslideprt slider row rless" id="Slider-cattab">
-                {% for block in section.blocks limit: section.blocks.size %}
-                <li class="slider__slide list-unstyled wbcatb col-2 cless" id="Slide-{{ block.id }}-{{ forloop.index }}">
-                        {%- assign collection = collections[block.settings.collection] -%}
-                        {% if collection.image %}
-                        {%- assign collection_image = collection.image -%}
-                        {% elsif collection.products.first and collection.products.first.images != empty %}
-                        {%- assign collection_image = collection.products.first.featured_image -%}
-                        {% else %}
-                        {% assign collection_image = blank %}
-                        {% endif %}
-                        <div class="homecatb text-center">    
-                            <a href="{% if collection.products == empty %}#{% else %}{{ collection.url }}{% endif %}">
-                                <div class="wbcat_img">
-                                    {% if collection_image != blank %}
-                                        <img loading="lazy" class="img-fluid mx-auto rounded-circle" src="{{ collection_image | img_url: '200x200', crop: 'center' }}" alt="{{ collection.title }}" style="border: 2px solid #A8C73A; padding: 5px;">
-                                    {% else %}
-                                        <img loading="lazy" class="img-fluid mx-auto rounded-circle" src="https://dummyimage.com/200x200/f8e0e0" style="border: 2px solid #A8C73A; padding: 5px;">
-                                    {% endif %}
-                                </div>
-                                <div class="catcontent">
-                                    <h2 style="font-size: 14px; margin-top: 10px;">{{ collection.title }}</h2>
-                                </div>
-                            </a>
-                        </div>
-                    </li>
-                {% endfor %}
-            </ul>
-        </slider-component>
+    {% if section.settings.m_title != blank %}
+      <h2 class="heading text-center"><span>{{ section.settings.m_title }}</span></h2>
+    {% endif %}
+    <div class="row rless d-flex justify-content-center">
+      {%- for block in section.blocks -%}
+        {%- assign collection = collections[block.settings.collection] -%}
+        <div class="col-xl-2 col-lg-2 col-md-3 col-4 cless">
+          <div class="wbcatb">
+              <div class="wbcat_img">
+                <a href="{{ collection.url }}">
+                  {%- if collection.image != blank -%}
+                    <img loading="lazy" src="{{ collection.image | img_url: '150x150', crop: 'center' }}" alt="{{ collection.title }}" class="img-fluid mx-auto" width="150" height="150" />
+                  {%- else -%}
+                    <img loading="lazy" src="https://dummyimage.com/150x150/f5f5f5" class="img-fluid mx-auto" width="150" height="150" />
+                  {%- endif -%}
+                </a>
+              </div>
+              <div class="catcontent">
+                <a href="{{ collection.url }}">
+                  <h2>{{ collection.title | default: 'Collection' }}</h2>
+                </a>
+              </div>
+          </div>
+        </div>
+      {%- endfor -%}
     </div>
+  </div>
 </div>
 
 <style>
-.wbcat_img img {
-    width: 100px;
-    height: 100px;
+  .wbcat_img img {
+    width: 140px;
+    height: 140px;
     object-fit: cover;
-}
-.wbcatb .catcontent h2 {
-    font-weight: 500;
-}
+    border-radius: 50% !important;
+    border: 2px solid #06623b;
+    padding: 6px;
+    transition: all 0.3s ease;
+    background: #fff;
+  }
+  .wbcat_img img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  .wbcatb .catcontent h2 {
+    font-weight: 700;
+    font-size: 14px;
+    margin-top: 12px;
+    color: #06623b;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+  }
+  .wbcollection-list {
+    padding: 40px 0;
+    background: #ffffff;
+  }
+  .wbcatb {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  .wbcollection-list .heading {
+      margin-bottom: 30px;
+  }
 </style>
 
 {% schema %}
 {
-    "name": "Webi Collection list",
-    "class": "spaced-section index-section",
-    "max_blocks": 12,
-	"settings": [
-      {
-        "type": "text",
-        "id": "m_title",
-        "label": "Top Heading",
-        "default": "Top Category"
-      }
-    ],
-    "blocks": [
+  "name": "Collection List",
+  "class": "spaced-section",
+  "max_blocks": 15,
+  "settings": [
     {
-        "type": "webi_collection",
-        "name": "Collection",
-        "settings": [
-            {
-                "label": "Collection",
-                "id": "collection",
-                "type": "collection"
-            }
-        ]
+      "type": "text",
+      "id": "m_title",
+      "label": "Top Heading",
+      "default": "Our Collections"
     }
-    ],
-    "presets": [
+  ],
+  "blocks": [
     {
-        "name": "Webi Collection list",
-        "category": "Collection",
-        "blocks": [
-            {
-              "type": "webi_collection"
-            }
-        ]
+      "type": "webi_collection",
+      "name": "Collection",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        }
+      ]
     }
-    ]
+  ],
+  "presets": [
+    {
+      "name": "Collection List",
+      "category": "Collection"
+    }
+  ]
 }
 {% endschema %}
