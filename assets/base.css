@@ -4839,53 +4839,27 @@ footer {
 
 }
 
-/* Category menu styling under header */
-.cate-menu {
-  background-color: #f8f8f8;
-  border-bottom: 1px solid #eee;
-  padding: 5px 0;
-}
-
-.cate-menu .whr-menu {
-  margin: 0;
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-  font-weight: 600;
-  color: #06623B;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-.cate-menu .whr-menu svg {
-  margin-left: 10px;
-  width: 12px;
-  height: 12px;
-  fill: #06623B;
-}
-
-.cate-menu .navbar-toggler {
-  padding: 0;
-  margin-right: 10px;
-}
-
-.cate-menu .navbar-toggler svg {
-  fill: #06623B;
-}
-
-.cate-menu .cms-menu p {
-  margin: 0;
-  font-size: 13px;
-  color: #666;
-  text-align: right;
-}
-
-@media (max-width: 991px) {
-  .cate-menu {
-    display: none;
-  }
-}
-
 .customer_account ul li a:hover svg {
   fill: var(--color-wbmaincolors-text);
+}
+
+/* Custom Backgrounds for alignment with screenshot */
+#shopify-section-1638530511a1d81fdf .service {
+  background-color: #B6C2B2 !important;
+  padding: 30px 0;
+}
+
+.image-with-text__content {
+  background-color: #B6C2B2 !important;
+}
+
+/* This colors the product cards a light yellow as per the "Our Best Sellers" screenshot */
+.card-wrapper.product-card-wrapper .card {
+  background-color: #FAFFDA !important;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.card-wrapper.product-card-wrapper .card__inner {
+  background-color: transparent !important;
 }
