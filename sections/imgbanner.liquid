@@ -3,7 +3,7 @@
     <div class="row rless">
       {% if section.blocks.size > 0 %}      
           {% for block in section.blocks %}
-            <div class="col-sm-6 col-12 cless">
+            <div class="{% if section.blocks.size == 3 %}col-sm-4{% else %}col-sm-6{% endif %} col-12 cless">
               <div class="beffect">
                 {% if block.settings.link != blank %}<a href="{{ block.settings.link }}">{% endif%}
                 {% if block.settings.image != blank %}
@@ -39,22 +39,22 @@
 
 {% schema %}
 {
-"name": "Image Banner",
-"class": "spaced-section",
-"max_blocks": 2,  
-"settings": [
+  "name": "Image Banner",
+  "class": "spaced-section",
+  "max_blocks": 10,
+  "settings": [
     {
-        "type": "color",
-        "id": "bg_color",
-        "label": "Background Color",
-        "default": "#f5f5f5"
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#f5f5f5"
     }
   ],
   "blocks": [
     {
       "type": "Image",
       "name": "Image Banner",
-      "settings": [ 
+      "settings": [
         {
           "type": "image_picker",
           "id": "image",
@@ -89,15 +89,15 @@
           "id": "bg_btn_color",
           "default": "#fff",
           "label": "Button Bg Color"
-        }  
+        }
       ]
     }
   ],
-"presets": [
+  "presets": [
     {
       "name": "Image Banner",
       "category": "Image"
     }
   ]
 }
-{% endschema %}    
+{% endschema %}
