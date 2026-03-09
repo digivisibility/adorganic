@@ -10,22 +10,7 @@
                         "storytitle": "Start Building a Healthier Life in 7 Days. With Our 100% Certified Organic Products.",
                         "storysubtitle": "Providing you with freshest organic products from our carefully selected local farms. Quality you can trust, delivered directly home for your healthier and better lifestyle.",
                         "linkurl": "shopify:\/\/collections",
-                        "link": "shopify:\/\/collections",
-                        "wblooktop_1": 55,
-                        "wblookleft_1": 73,
-                        "product_1": "pomegranate-small",
-                        "wblooktop_2": 20,
-                        "wblookleft_2": 82,
-                        "product_2": "",
-                        "wblooktop_3": 61,
-                        "wblookleft_3": 48,
-                        "product_3": "",
-                        "wblooktop_4": 30,
-                        "wblookleft_4": 50,
-                        "product_4": "",
-                        "wblooktop_5": 20,
-                        "wblookleft_5": 40,
-                        "product_5": ""
+                        "link": "shopify:\/\/collections"
                     }
                 },
                 "72e042ef-c5b4-4068-bd83-1b9974532f38": {
@@ -35,22 +20,7 @@
                         "storytitle": "Fresh Organic Produce",
                         "storysubtitle": "Straight from the farm to your table.",
                         "linkurl": "shopify:\/\/collections\/all",
-                        "link": "shopify:\/\/collections",
-                        "wblooktop_1": 30,
-                        "wblookleft_1": 83,
-                        "product_1": "fruit-fresh-regular-2-pcs",
-                        "wblooktop_2": 20,
-                        "wblookleft_2": 60,
-                        "product_2": "",
-                        "wblooktop_3": 61,
-                        "wblookleft_3": 48,
-                        "product_3": "",
-                        "wblooktop_4": 30,
-                        "wblookleft_4": 50,
-                        "product_4": "",
-                        "wblooktop_5": 20,
-                        "wblookleft_5": 40,
-                        "product_5": ""
+                        "link": "shopify:\/\/collections"
                     }
                 }
             },
@@ -100,75 +70,29 @@
                 "m_title": ""
             }
         },
-        "1638523605a057ae9f": {
-            "type": "toprated-product",
-            "settings": {
-                "bg_color": "#06623b",
-                "subtitle": "Organic store",
-                "storytitle": "Our Best Sellers",
-                "storysubtitle": "Top picks from our organic collection.",
-                "linkurl": "shopify:\/\/collections",
-                "rows": 1,
-                "display_product_type": true,
-                "show_rating": true,
-                "show_variants": true,
-                "picker_type": "button",
-                "show_colorswatch": true,
-                "collection": "frontpage"
-            }
-        },
-        "1640775563d66fac83": {
-            "type": "product-category-1",
-            "blocks": {
-                "collection_Ddp7wn": {
-                    "type": "collection",
-                    "settings": {
-                        "cat_name": "",
-                        "collection": ""
-                    }
-                },
-                "eb775379-be86-4765-9a41-3938112b657a": {
-                    "type": "collection",
-                    "settings": {
-                        "cat_name": "Cold Pressed Oils",
-                        "collection": "cold-pressed-oils"
-                    }
-                }
-            },
-            "block_order": [
-                "collection_Ddp7wn",
-                "eb775379-be86-4765-9a41-3938112b657a"
-            ],
-            "settings": {
-                "back_color": "",
-                "m_title": "Shop by Category",
-                "num_topr": 2,
-                "display_product_type": true,
-                "show_rating": true,
-                "show_variants": true,
-                "picker_type": "button",
-                "show_colorswatch": true
-            }
-        },
         "1638530511a1d81fdf": {
             "type": "service",
             "settings": {
                 "m_title": "All about shop",
                 "s_title": true,
                 "icon1": "support",
-                "checkiconimage1": false,
                 "header_gift": "Natural Foods",
                 "header_gift1": "100% organic and natural produce.",
-                "sa_title": true,
                 "icon2": "shipping",
-                "checkiconimage2": false,
                 "header_pay": "Direct From Farmers",
                 "header_pay1": "Sourced directly, ensuring freshness.",
-                "sb_title": true,
                 "icon3": "moneyback",
-                "checkiconimage3": false,
                 "header_support": "100% Secure Checkout",
                 "header_support1": "Safe and secure payment gateway."
+            }
+        },
+        "best-sellers": {
+            "type": "special",
+            "settings": {
+                "back_color": "#ffffff",
+                "m_title": "Our Best Sellers",
+                "rows": 1,
+                "collection": "frontpage"
             }
         },
         "imgbanner-3blocks": {
@@ -240,43 +164,32 @@
                 "m_title": "What Our Customers Say"
             }
         },
-        "1638597115c8a203b4": {
-            "type": "logo-bar",
+        "shop-by-category": {
+            "type": "product-category-1",
             "blocks": {
-                "block1": {
-                    "type": "logo_image",
+                "cat1": {
+                    "type": "collection",
                     "settings": {
-                        "link": "shopify:\/\/collections"
-                    }
-                }
-            },
-            "block_order": [
-                "block1"
-            ],
-            "settings": {
-                "m_title": "We're Also On"
-            }
-        },
-        "rich-text-about": {
-            "type": "rich-text",
-            "blocks": {
-                "heading": {
-                    "type": "heading",
-                    "settings": {
-                        "heading": "About AD Organics"
+                        "cat_name": "Cold Pressed Oils",
+                        "collection": "cold-pressed-oils"
                     }
                 },
-                "text": {
-                    "type": "text",
+                "cat2": {
+                    "type": "collection",
                     "settings": {
-                        "text": "<p>Our goal is for everyone to live a healthier and happy life, we are more than just food that is why we bringing you the most authentic ingredients some of them rare and some found in our grandmother's kitchen. You feel the magic with AD Organics more than just food it's food that is medicine for souls. And we believe quality should be the first priority. Planet earth is in our hands and we are here to make it greener and healthier. Improving and feeding through our organic produce from our sources. Our goal is to provide fresh and authentic foods with plenty of natural vitamins, nutrition, and antioxidants. No added salt, sugar or colour with our products. We at AD Organics provide you with the same purity as and when they were grown. Our sources and our farmers are our pillars because of their hard work we are here. For them, we try to create a healthy environment where they can sustain better lives for their families. We take pride in the results of the food that we produce and the lives that we help improve in the process.<\/p>"
+                        "cat_name": "Dals & Pulses",
+                        "collection": "organic-dals-pulses"
                     }
                 }
             },
             "block_order": [
-                "heading",
-                "text"
-            ]
+                "cat1",
+                "cat2"
+            ],
+            "settings": {
+                "m_title": "Shop by Category",
+                "num_topr": 1
+            }
         },
         "image-with-text-story": {
             "type": "image-with-text",
@@ -297,6 +210,27 @@
             "block_order": [
                 "heading",
                 "button"
+            ]
+        },
+        "rich-text-about": {
+            "type": "rich-text",
+            "blocks": {
+                "heading": {
+                    "type": "heading",
+                    "settings": {
+                        "heading": "About AD Organics"
+                    }
+                },
+                "text": {
+                    "type": "text",
+                    "settings": {
+                        "text": "<p>Our goal is for everyone to live a healthier and happy life, we are more than just food that is why we bringing you the most authentic ingredients some of them rare and some found in our grandmother's kitchen. You feel the magic with AD Organics more than just food it's food that is medicine for souls. And we believe quality should be the first priority. Planet earth is in our hands and we are here to make it greener and healthier. Improving and feeding through our organic produce from our sources. Our goal is to provide fresh and authentic foods with plenty of natural vitamins, nutrition, and antioxidants. No added salt, sugar or colour with our products. We at AD Organics provide you with the same purity as and when they were grown. Our sources and our farmers are our pillars because of their hard work we are here. For them, we try to create a healthy environment where they can sustain better lives for their families. We take pride in the results of the food that we produce and the lives that we help improve in the process.<\/p>"
+                    }
+                }
+            },
+            "block_order": [
+                "heading",
+                "text"
             ]
         },
         "imgbanner-2": {
@@ -324,19 +258,36 @@
             "settings": {
                 "bg_color": "#f5f5f5"
             }
+        },
+        "logo-bar": {
+            "type": "logo-bar",
+            "blocks": {
+                "block1": {
+                    "type": "logo_image",
+                    "settings": {
+                        "link": "shopify:\/\/collections"
+                    }
+                }
+            },
+            "block_order": [
+                "block1"
+            ],
+            "settings": {
+                "m_title": "We're Also On"
+            }
         }
     },
     "order": [
-        "16382683861bf7469c",
         "1638183837345ba848",
+        "16382683861bf7469c",
         "1638530511a1d81fdf",
-        "1638523605a057ae9f",
+        "best-sellers",
         "imgbanner-3blocks",
         "16385343166ac4f308",
-        "1640775563d66fac83",
+        "shop-by-category",
         "image-with-text-story",
         "rich-text-about",
         "imgbanner-2",
-        "1638597115c8a203b4"
+        "logo-bar"
     ]
 }
