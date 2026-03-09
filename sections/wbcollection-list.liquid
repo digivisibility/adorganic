@@ -3,6 +3,7 @@
     {% if section.settings.m_title != blank %}
       <h2 class="heading text-center"><span>{{ section.settings.m_title }}</span></h2>
     {% endif %}
+<<<<<<< HEAD
     <div class="row rless d-flex justify-content-center flex-nowrap overflow-auto" style="padding-bottom: 10px;">
       {%- for block in section.blocks -%}
         {%- assign collection = collections[block.settings.collection] -%}
@@ -16,6 +17,19 @@
                     <img loading="lazy" src="{{ collection.image | img_url: '150x150', crop: 'center' }}" alt="{{ collection.title }}" width="150" height="150" />
                   {%- else -%}
                     {{ 'collection-1' | placeholder_svg_tag: 'placeholder-svg' }}
+=======
+    <div class="row rless d-flex justify-content-center">
+      {%- for block in section.blocks -%}
+        {%- assign collection = collections[block.settings.collection] -%}
+        <div class="col-xl-2 col-lg-2 col-md-3 col-4 cless">
+          <div class="wbcatb">
+              <div class="wbcat_img">
+                <a href="{{ collection.url }}">
+                  {%- if collection.image != blank -%}
+                    <img loading="lazy" src="{{ collection.image | img_url: '150x150', crop: 'center' }}" alt="{{ collection.title }}" class="img-fluid mx-auto" width="150" height="150" />
+                  {%- else -%}
+                    <img loading="lazy" src="https://dummyimage.com/150x150/f5f5f5" class="img-fluid mx-auto" width="150" height="150" />
+>>>>>>> 257edc387182778733d05eb5181a865e15b6d0eb
                   {%- endif -%}
                 </a>
               </div>
@@ -33,6 +47,7 @@
 
 <style>
   .wbcat_img img {
+<<<<<<< HEAD
     width: 140px !important;
     height: 140px !important;
     max-width: 140px !important;
@@ -72,6 +87,39 @@
     .catcontent h2 {
       font-size: 12px;
     }
+=======
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50% !important;
+    border: 2px solid #06623b;
+    padding: 6px;
+    transition: all 0.3s ease;
+    background: #fff;
+  }
+  .wbcat_img img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  .wbcatb .catcontent h2 {
+    font-weight: 700;
+    font-size: 14px;
+    margin-top: 12px;
+    color: #06623b;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+  }
+  .wbcollection-list {
+    padding: 40px 0;
+    background: #ffffff;
+  }
+  .wbcatb {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  .wbcollection-list .heading {
+      margin-bottom: 30px;
+>>>>>>> 257edc387182778733d05eb5181a865e15b6d0eb
   }
 </style>
 

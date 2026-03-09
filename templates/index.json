@@ -278,16 +278,17 @@
         }
     },
     "order": [
-        "16382683861bf7469c",
-        "1638183837345ba848",
-        "1638530511a1d81fdf",
-        "best-sellers",
-        "imgbanner-3blocks",
-        "16385343166ac4f308",
-        "shop-by-category",
-        "image-with-text-story",
-        "rich-text-about",
-        "imgbanner-2",
-        "logo-bar"
-    ]
-}
+        "order": [
+            "16382683861bf7469c",
+            "1638183837345ba848",
+            "1638530511a1d81fdf",
+            "best-sellers",
+            "imgbanner-3blocks",
+            "16385343166ac4f308",
+            "shop-by-category",
+            "image-with-text-story",
+            "rich-text-about",
+            "imgbanner-2",
+            "logo-bar"
+        ]
+    }
