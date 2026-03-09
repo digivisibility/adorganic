@@ -4,7 +4,7 @@
 
 <div class="product-category1">
     <div class="container">
-        <h2 class="heading text-left"><span>{{ section.settings.m_title }}</span></h2>
+        <h2 class="heading text-center"><span>{{ section.settings.m_title }}</span></h2>
         <slider-component>
             <ul class="allslideprt ptabbr1 slider row rless" id="Slider-protab">
                 {%- for block in section.blocks -%}
@@ -31,7 +31,7 @@
                             {% assign num_row = section.settings.num_topr | times: 1 %}
                             {% assign temp = 0 %}
                                 {% for product in collection.products %}
-                                    {% if temp == 0 %}<li id="Slide-{{ section.id }}-{{ block.id }}-{{ forloop.index }}" class="list-unstyled twopro grid__item col-xl-3 col-lg-4 col-md-4 col-6 cless slider__slide" tabindex="-1">{% endif %}
+                                    {% if temp == 0 %}<li id="Slide-{{ section.id }}-{{ block.id }}-{{ forloop.index }}" class="list-unstyled twopro grid__item col-xl-4 col-lg-4 col-md-4 col-6 cless slider__slide" tabindex="-1">{% endif %}
                                        
                                             {% render 'product-card',
                                             product_card_product: product,

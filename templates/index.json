@@ -58,13 +58,20 @@
                     "settings": {
                         "collection": "cold-pressed-oils"
                     }
+                },
+                "webi_collection_Ghee": {
+                    "type": "webi_collection",
+                    "settings": {
+                        "collection": "desi-cow-ghee"
+                    }
                 }
             },
             "block_order": [
                 "webi_collection_cchxLC",
                 "webi_collection_Jw7AxN",
                 "webi_collection_hVePFY",
-                "webi_collection_rUxWpA"
+                "webi_collection_rUxWpA",
+                "webi_collection_Ghee"
             ],
             "settings": {
                 "m_title": ""
