@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="col-lg-9 col-12">
+    <div class="cms-menu">
+        {% if section.settings.text != blank %}
+            {{ section.settings.text }}
+        {% endif %}
+    </div>
+  </div>
+  <div class="col-lg-3 text-right offer-icon">
+    {% if section.settings.text1 != blank %}
+        {{ section.settings.text1 }}
+    {% endif %}
+  </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "Cms Menu",
+  "class": "index-section",
+  "settings": [
+    {
+       "type": "richtext",
+       "id": "text",
+       "label": "Text",
+       "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+    },
+    {
+       "type": "richtext",
+       "id": "text1",
+       "label": "Text",
+       "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+    }
+
+  ],
+    "presets": [
+    {
+      "name": "Cms Menu",
+      "category": "Megamenu"
+    }
+  ]
+}
+{% endschema %}
