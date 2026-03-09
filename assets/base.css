@@ -2016,6 +2016,48 @@ noscript .localization-selector.link {
     margin-bottom: 10px;
     line-height: 1.1;
 }
+
+/* Custom Header Styles */
+.header-main {
+  transition: background 0.3s ease;
+}
+.header-links li a {
+  position: relative;
+  display: inline-block;
+  padding: 5px 0;
+}
+.header-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #A8C73A;
+  transition: width 0.3s ease;
+}
+.header-links li a:hover::after {
+  width: 100%;
+}
+.header-links li a:hover {
+  color: #A8C73A !important;
+  text-decoration: none;
+}
+.header-icon {
+  color: #06623B;
+  transition: opacity 0.3s ease;
+}
+.header-icon:hover {
+  opacity: 0.7;
+}
+.header-top-announcement {
+  letter-spacing: 0.5px;
+}
+@media (max-width: 991px) {
+  .header-main .container-fluid {
+    padding: 10px 20px !important;
+  }
+}
 .slidertext p{
     font-size: 14px;
     color: var(--color-background);
